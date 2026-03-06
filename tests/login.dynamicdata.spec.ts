@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage'
 import loginData from '../test-data/loginDataNew.json'
 
 
-test.describe('Data Driven Login Tests', () => {
+test.describe('Data Driven Login Tests', async() => {
 
     loginData.forEach((data) => {
 
