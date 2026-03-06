@@ -4,7 +4,7 @@ import path from 'path';
 export type LoginData = {
     username: string;
     password: string;
-    expected: string;
+    expected: string,
     run: string;
 }
 
@@ -15,6 +15,9 @@ export function readExcel(filePath: string, sheetName: string): LoginData[]{
 
     const workbook = XLSX.readFile(fullPath);
     const sheet = workbook.Sheets[sheetName];
-    const data = XLSX.utils.sheet_to_json(sheet);
+      const data :LoginData[]= XLSX.utils.sheet_to_json(sheet);
+ //   const data = XLSX.utils.sheet_to_json(sheet);
+   // const data = XLSX.utils.sheet_to_json<LoginData>(sheet);
+    
     return data;
 }

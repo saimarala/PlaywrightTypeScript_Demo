@@ -26,7 +26,7 @@ export class LoginPage{
         await this.loginButton.click();
     }
 
-    // async verifyLoginSuccess(){
-    //     await this.page.waitForURL('https://www.saucedemo.com/inventory.html');
-    // }
+    async verifyLoginSuccess(){
+        await this.page.waitForURL('https://www.saucedemo.com/inventory.html');
+    }
 }

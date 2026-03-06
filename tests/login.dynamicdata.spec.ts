@@ -2,7 +2,10 @@ import { expect, test } from '@playwright/test'
 import { LoginPage } from '../pages/LoginPage'
 import loginData from '../test-data/loginDataNew.json'
 
-loginData.forEach((data) => {
+
+test.describe('Data Driven Login Tests', () => {
+
+    loginData.forEach((data) => {
 
     if (!data.run) return;
 
@@ -19,4 +22,5 @@ loginData.forEach((data) => {
         }
 
     });
+});
 });
