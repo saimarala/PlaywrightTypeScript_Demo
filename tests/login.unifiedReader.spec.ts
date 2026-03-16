@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
-import { readExcel,LoginData } from '../utils/excelReader';
+import { readData } from '../utils/dataReader';
 
-const testData: LoginData[] = readExcel('./test-data/LoginData.xlsx', 'Sheet1');
+// const testData = readData('./test-data/loginDataNew.json');
+// const testData = readData('./test-data/LoginData.csv');
+const testData = readData('./test-data/LoginData.xlsx', 'Sheet1');
 
 test.describe('Login Tests', () => {
 
